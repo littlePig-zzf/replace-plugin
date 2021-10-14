@@ -1,0 +1,16 @@
+{
+  "name": "replace-plugin",
+  "version": "1.0.0",
+  "description": "Internationalization requires replacing text plug-ins",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "littlepig-zzf",
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}
