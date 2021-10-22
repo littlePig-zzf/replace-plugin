@@ -134,15 +134,16 @@ const getLang = function () {
 };
 
 // 替换
-const i18nTxt = async function (lang, targetDir) {
+const i18nTxt = async function (lang, _filePath) {
+    console.log(_filePath, '_filePath');
     // await getLang();
     langData = lang
-    filePath = path.join(__dirname, targetDir)
+    filePath = _filePath
     fileDisplay(filePath, (_path) => {
         // let _path = path.join(__dirname,'modules','abnormal','export.vue');
         getHtml(_path, (data) => {
             if (Array.isArray(data.match(/<template>[\s\S]+<\/template>/))) {
-                console.log('html', data.match(/<template>[\s\S]+<\/template>/));
+                // console.log('html', data.match(/<template>[\s\S]+<\/template>/));
             }
             if (_path.indexOf('\\ECNManagement\\steps.vue') !== -1)return;
             let html = data.match(/<template>[\s\S]+<\/template>/);

@@ -7,8 +7,10 @@ class Replace {
         this.options = options
     }
     apply(compiler) {
+
         compiler.hooks.done.tap('replace', (compile)=> {
-            replace(this.options.langRerource, this.options.targetDir||'')
+            
+            replace(this.options.langRerource, this.options.filePath)
         })
     }
 }
